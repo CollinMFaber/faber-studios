@@ -10,19 +10,18 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import aboutTagline from "@/assets/reference/about-handwritten-tagline.png";
-import featureImage from "@/assets/reference/featured-main.png";
+import aboutTagline from "@/assets/reference/about-handwritten-tagline-transparent.png";
+import faberStudiosLogo from "@/assets/faber-studios-stacked.svg";
+import featureImage from "@/assets/featured-main-clean.png";
 import coastImage from "@/assets/reference/featured-thumb-coast.png";
 import mapImage from "@/assets/reference/featured-thumb-map.png";
 import scooterImage from "@/assets/reference/featured-thumb-scooter.png";
 import heroImage from "@/assets/hero-header-recreated.png";
-import footerLogo from "@/assets/reference/logo-footer.png";
-import headerLogo from "@/assets/reference/logo-header.png";
-import projectWordmark from "@/assets/project-wordmark.png";
-import brandIcon from "@/assets/reference/service-brand-icon.png";
-import collaborationIcon from "@/assets/reference/service-collaboration-icon.png";
-import developmentIcon from "@/assets/reference/service-development-icon.png";
-import productionIcon from "@/assets/reference/service-production-icon.png";
+import projectWordmark from "@/assets/project-wordmark-transparent.png";
+import brandIcon from "@/assets/reference/service-brand-icon-transparent.png";
+import collaborationIcon from "@/assets/reference/service-collaboration-icon-transparent.png";
+import developmentIcon from "@/assets/reference/service-development-icon-transparent.png";
+import productionIcon from "@/assets/reference/service-production-icon-transparent.png";
 import studioImage from "@/assets/reference/studio-workspace.png";
 
 export const Route = createFileRoute("/")({
@@ -74,7 +73,7 @@ const services = [
 function Brand({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className={inverted ? "brand brand-inverted" : "brand"} aria-label="Faber Studios home">
-      <img src={inverted ? footerLogo : headerLogo} alt="Faber Studios" width={inverted ? 112 : 176} height={inverted ? 45 : 52} />
+      <img className="brand-logo" src={faberStudiosLogo} alt="" aria-hidden="true" />
     </a>
   );
 }

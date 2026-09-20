@@ -44,9 +44,10 @@ button { font: inherit; }
 
 .site-header { height: 78px; background: oklch(0.99 0.004 80); position: relative; z-index: 20; }
 .header-inner { height: 100%; display: grid; grid-template-columns: 190px minmax(0, 1fr) auto; align-items: center; gap: 28px; }
-.brand { display: inline-flex; width: max-content; }
-.brand img { display: block; width: 176px; height: 52px; object-fit: contain; }
-.brand-inverted img { width: 112px; height: 45px; }
+.brand { display: inline-flex; width: 139px; height: 70px; align-items: center; justify-content: center; }
+.brand-logo { display: block; width: 100%; height: 100%; object-fit: contain; }
+.brand-inverted { width: 123px; height: 62px; }
+.brand-inverted .brand-logo { filter: brightness(0) invert(1); }
 .desktop-nav { display: flex; justify-content: center; gap: 34px; font-size: 14px; font-weight: 500; }
 .desktop-nav a { position: relative; }
 .desktop-nav a::after { content: ""; position: absolute; left: 50%; right: 50%; bottom: -12px; height: 2px; background: var(--primary); transition: left .2s, right .2s; }
@@ -61,7 +62,7 @@ button { font: inherit; }
 .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .hero-shade { display: none; }
 .hero-content { position: relative; display: flex; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding-top: clamp(42px, 4.7vw, 60px); }
-.hero h1 { margin: 0 0 14px; font-family: var(--font-display); font-size: clamp(52px, 5.65vw, 72px); line-height: .98; letter-spacing: 0; }
+.hero h1 { margin: 0 0 14px; font-family: "Lato", sans-serif; font-weight: 900; font-size: clamp(52px, 5.65vw, 72px); line-height: .98; letter-spacing: 0; }
 .hero p { width: min(440px, 100%); margin: 0 0 15px; font-size: 15px; line-height: 1.48; }
 .hero-actions { display: flex; gap: 14px; }
 .button { min-height: 44px; padding: 0 25px; font-size: 14px; border: 1.5px solid transparent; }
@@ -90,11 +91,10 @@ button { font: inherit; }
 .button-gold { background: var(--gold); color: var(--foreground); min-width: 175px; }
 .feature-video { position: relative; min-height: 354px; overflow: hidden; }
 .feature-video img { width: 100%; height: 100%; object-fit: cover; }
-.feature-video > span { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); font-weight: 700; font-size: 15px; }
-.play-button { position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); width: 62px; height: 62px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--foreground); background: var(--primary-foreground); cursor: pointer; }
+.feature-video > span { position: absolute; left: 50%; top: calc(60% + 42px); transform: translateX(-50%); font-weight: 700; font-size: 15px; color: var(--primary-foreground); text-shadow: 0 1px 6px oklch(0 0 0 / .35); }
+.play-button { position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); width: 62px; height: 62px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--foreground); background: var(--primary-foreground); cursor: pointer; box-shadow: 0 6px 18px oklch(0 0 0 / .25); transition: transform .2s ease; }
+.play-button:hover { transform: translate(-50%, -50%) scale(1.06); }
 .play-button svg { margin-left: 4px; }
-.feature-video .play-button { opacity: 0; }
-.feature-video > span { display: none; }
 .triptych { min-height: 354px; display: grid; grid-template-rows: repeat(3, 1fr); gap: 7px; overflow: hidden; }
 .triptych img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 
@@ -137,8 +137,8 @@ button { font: inherit; }
   .page-shell { width: calc(100% - 32px); }
   .site-header { height: 70px; }
   .mobile-nav { top: 70px; }
-  .brand img { width: 132px; height: auto; }
-  .brand-inverted img { width: 112px; }
+  .brand { width: 127px; height: 64px; }
+  .brand-inverted { width: 123px; height: 62px; }
   .nav-cta { display: none; }
   .header-inner { grid-template-columns: minmax(0, 1fr) auto; }
   .hero > img { height: 250px; object-position: 72% center; }
